@@ -1,3 +1,6 @@
+# Temporary files for vim/Kate...
+*.swp
+
 # Object files
 *.o
 *.ko

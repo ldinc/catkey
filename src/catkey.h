@@ -37,4 +37,9 @@ typedef struct catkey_arg {
 	void *extra;
 } catkey_arg;
 
+unsigned long catkey_str_hash(const char *str);
+
+void catkey_arg_init(catkey_arg *arg);
+void catkey_arg_release(catkey_arg *arg);
+
 #endif

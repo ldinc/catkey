@@ -2,6 +2,7 @@ CC=gcc
 TEST=example
 INC=-I include/
 TARGET=catkey
+OBJ=obj/*.o
 
 all: @bin @include
 	$(CC) -c src/$(TARGET).c $(INC)
@@ -17,7 +18,7 @@ all: @bin @include
 	cp src/*.h include/
 
 example: all
-	$(CC) -o $(TEST).out example/$(TEST).c $(INC)
+	$(CC) -o $(TEST).out example/$(TEST).c $(INC) $(OBJ)
 	mv $(TEST).out bin/$(TEST)
 
 clean:
